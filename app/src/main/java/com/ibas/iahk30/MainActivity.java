@@ -1,5 +1,6 @@
 package com.ibas.iahk30;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setTitle("Login");
 
         //Tahap 2 : Inisialisasi ID
         edUser = (EditText)findViewById(R.id.user);
@@ -53,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (edPass.getText().toString().equalsIgnoreCase("admin")){
                 Toast.makeText(this, "Login Sukses",
                         Toast.LENGTH_LONG).show();
+
+                // Pindah halaman
+                Intent intent = new Intent(this, FormPilihan.class);
+                startActivity(intent);
             } else {
                 edPass.setError("Password Invalid");
             }

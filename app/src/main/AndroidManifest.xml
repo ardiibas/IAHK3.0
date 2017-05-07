@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SimpleList" />
+        <activity android:name=".CustomList" />
+        <activity android:name=".FormPilihan"></activity>
     </application>
 
 </manifest>
